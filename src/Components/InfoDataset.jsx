@@ -6,6 +6,7 @@ const datasetInfo = [
   { atributo: "Educación", tipo: "Categórico", descripcion: "Nivel educativo alcanzado" },
   { atributo: "Estado Civil", tipo: "Categórico", descripcion: "Soltero, Casado, etc." },
   { atributo: "Profesión", tipo: "Categórico", descripcion: "Tipo de trabajo o profesión" },
+  { atributo: "Profesión", tipo: "Categórico", descripcion: "Tipo de trabajo o profesión" },
 ];
 
 const InfoDelDataset = () => {
@@ -13,10 +14,12 @@ const InfoDelDataset = () => {
     <div className="container mt-5">
       <div className="card shadow">
         <div className="card-header bg-info text-white">
-          <h4 className="mb-0"> Información del Dataset</h4>
+          <h4 className="mb-0">Información del Dataset</h4>
         </div>
+
+        {/* Contenedor con scroll y altura limitada */}
         <div className="card-body p-0">
-          <div className="table-responsive">
+          <div style={{ maxHeight: "300px", overflowY: "auto" }}>
             <table className="table table-hover mb-0">
               <thead className="table-light text-center">
                 <tr>
@@ -41,5 +44,6 @@ const InfoDelDataset = () => {
     </div>
   );
 };
+
 
 export default InfoDelDataset;
